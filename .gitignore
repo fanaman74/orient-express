@@ -1,0 +1,17 @@
+# deps
+node_modules/
+
+# build
+.next/
+out/
+
+# env — never commit secrets
+.env.local
+.env*.local
+
+# IDE / OS
+.DS_Store
+*.log
+
+# Claude
+.claude/
