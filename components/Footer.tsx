@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border py-16 px-6 bg-bg-alt">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-8 text-center">
-        <a href="#accueil" className="font-display uppercase tracking-[0.15em] text-xl text-accent no-underline font-semibold">
+        <a href="#accueil" className="font-brand text-2xl text-accent no-underline">
           ORIENT EXPRESS
         </a>
 

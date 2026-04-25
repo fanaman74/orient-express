@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center transition-all duration-[400ms] ease-in-out ${scrolled ? 'bg-bg/95 backdrop-blur-md border-b border-border' : 'bg-transparent'}`}>
         <div className="w-full max-w-[1200px] mx-auto px-6 flex items-center">
-          <a href="#accueil" className="font-display uppercase tracking-[0.15em] text-lg text-accent no-underline whitespace-nowrap font-semibold">
+          <a href="#accueil" className="font-brand text-xl text-accent no-underline whitespace-nowrap">
             ORIENT EXPRESS
           </a>
 
