@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Startpagina",
+    "menu": "Menu",
+    "hours": "Openingsuren",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Authentieke Chinese Keuken · Brussel",
+    "subtitle": "Authentieke smaken van de traditionele Chinese keuken, ter plaatse te nuttigen of mee te nemen in De Wand.",
+    "cta_menu": "Bekijk het Menu",
+    "cta_find": "Ons Vinden",
+    "scroll": "Ontdekken"
+  },
+  "about": {
+    "label": "Ons Restaurant",
+    "title": "Authentieke Chinese Keuken",
+    "body": "In het hart van de wijk De Wand in Laken biedt Orient Express u een authentieke Chinese keuken aan om ter plaatse te eten of mee te nemen. Soepen, voorgerechten, vlees, zeevruchten, chinese fondue — onze uitgebreide kaart zal alle smaken bevredigen.",
+    "stat_rating": "Google Score",
+    "stat_dishes": "Gerechten op de kaart",
+    "stat_delivery": "Levering v.a. 20€",
+    "stat_fondue": "Fondue op reservatie"
+  },
+  "menu": {
+    "label": "Onze Kaart",
+    "title": "Menu",
+    "rice_note": "Alle gerechten worden geserveerd met witte rijst.",
+    "loading": "Laden…",
+    "empty": "Geen gerechten gevonden.",
+    "col_num": "Nr.",
+    "col_dish": "Gerecht",
+    "col_price": "Prijs",
+    "min_people": "Min.",
+    "person": "persoon",
+    "persons": "personen",
+    "max": "max",
+    "add": "Toevoegen"
+  },
+  "findus": {
+    "label": "Informatie",
+    "title": "Ons Vinden",
+    "address_label": "Adres",
+    "phone_label": "Telefoon",
+    "delivery_label": "Thuislevering",
+    "delivery_from": "Vanaf",
+    "delivery_radius": "· Binnen een straal van 3 km",
+    "delivery_hours": "Beschikbaar",
+    "hours_label": "Openingsuren",
+    "closed": "Gesloten",
+    "closed_note": "Gesloten op niet-feestelijke maandagen.",
+    "rice_note": "Alle gerechten worden geserveerd met",
+    "white_rice": "witte rijst",
+    "upgrade_note": "Vervangen door gebakken rijst of gebakken noedels:",
+    "upgrade_price": "+3,00€ per gerecht"
+  },
+  "footer": {
+    "rights": "Alle rechten voorbehouden."
+  },
+  "order": {
+    "title": "Uw Bestelling",
+    "close": "Sluiten",
+    "total": "Totaal",
+    "emailOrder": "Bestellen",
+    "empty": "Uw winkelmandje is leeg",
+    "customerName": "Uw naam",
+    "customerEmail": "E-mail",
+    "customerPhone": "Telefoon (optioneel)",
+    "sendOtp": "Bestelling bevestigen",
+    "sending": "Verzenden…",
+    "otpSentTo": "Code verzonden naar",
+    "otpLabel": "Verificatiecode",
+    "verify": "Bevestigen",
+    "verifying": "Verificatie…",
+    "otpError": "Onjuiste of verlopen code",
+    "successTitle": "Bestelling bevestigd!",
+    "successBody": "We hebben uw bestelling ontvangen en sturen u een bevestiging per e-mail.",
+    "newOrder": "Nieuwe bestelling",
+    "otpNote": "U ontvangt een 6-cijferige code om uw e-mail te bevestigen.",
+    "resend": "Code opnieuw sturen"
+  }
+}

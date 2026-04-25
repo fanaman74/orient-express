@@ -5,6 +5,7 @@ import Menu from '@/components/Menu';
 import FindUs from '@/components/FindUs';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
+import TakeawayPanel from '@/components/TakeawayPanel';
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <ScrollReveal><Menu /></ScrollReveal>
       <ScrollReveal><FindUs /></ScrollReveal>
       <Footer />
+      <TakeawayPanel />
     </>
   );
 }

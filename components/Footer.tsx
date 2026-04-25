@@ -1,11 +1,18 @@
-const navLinks = [
-  { label: 'Accueil', href: '#accueil' },
-  { label: 'Menu', href: '#menu' },
-  { label: 'Horaires', href: '#informations' },
-  { label: 'Contact', href: '#informations' },
-];
+'use client';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function Footer() {
+  const { dict } = useLanguage();
+  const t = dict.nav;
+  const tf = dict.footer;
+
+  const navLinks = [
+    { label: t.home,    href: '#accueil' },
+    { label: t.menu,    href: '#menu' },
+    { label: t.hours,   href: '#informations' },
+    { label: t.contact, href: '#informations' },
+  ];
+
   return (
     <footer className="border-t border-border py-16 px-6 bg-bg-alt">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-8 text-center">
@@ -32,11 +39,10 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Divider */}
         <div className="w-12 h-px bg-border" />
 
         <p className="text-text-muted text-xs">
-          © {new Date().getFullYear()} Orient Express — Cuisine Chinoise. Tous droits réservés.
+          © {new Date().getFullYear()} Orient Express — Cuisine Chinoise. {tf.rights}
         </p>
       </div>
     </footer>

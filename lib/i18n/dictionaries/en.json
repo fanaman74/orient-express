@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "hours": "Hours",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Authentic Chinese Cuisine · Brussels",
+    "subtitle": "Authentic flavours of traditional Chinese cuisine, to enjoy in or to take away at De Wand.",
+    "cta_menu": "View Menu",
+    "cta_find": "Find Us",
+    "scroll": "Discover"
+  },
+  "about": {
+    "label": "Our Restaurant",
+    "title": "Authentic Chinese Cuisine",
+    "body": "In the heart of the De Wand neighbourhood in Laeken, Orient Express offers you authentic Chinese cuisine to eat in or take away. Soups, starters, meat, seafood, Chinese hot pot — our generous menu will satisfy every appetite.",
+    "stat_rating": "Google Rating",
+    "stat_dishes": "Dishes on menu",
+    "stat_delivery": "Delivery from €20",
+    "stat_fondue": "Hot pot on booking"
+  },
+  "menu": {
+    "label": "Our Menu",
+    "title": "Menu",
+    "rice_note": "All dishes are served with steamed white rice.",
+    "loading": "Loading…",
+    "empty": "No dishes found.",
+    "col_num": "No.",
+    "col_dish": "Dish",
+    "col_price": "Price",
+    "min_people": "Min.",
+    "person": "person",
+    "persons": "persons",
+    "max": "max",
+    "add": "Add"
+  },
+  "findus": {
+    "label": "Information",
+    "title": "Find Us",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "delivery_label": "Home Delivery",
+    "delivery_from": "From",
+    "delivery_radius": "· Within a 3 km radius",
+    "delivery_hours": "Available",
+    "hours_label": "Opening Hours",
+    "closed": "Closed",
+    "closed_note": "Closed on non-public Mondays.",
+    "rice_note": "All dishes are served with",
+    "white_rice": "steamed white rice",
+    "upgrade_note": "Replace with fried rice or stir-fried noodles:",
+    "upgrade_price": "+€3.00 per dish"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "order": {
+    "title": "Your Order",
+    "close": "Close",
+    "total": "Total",
+    "emailOrder": "Order",
+    "empty": "Your cart is empty",
+    "customerName": "Your name",
+    "customerEmail": "Email",
+    "customerPhone": "Phone (optional)",
+    "sendOtp": "Confirm order",
+    "sending": "Sending…",
+    "otpSentTo": "Code sent to",
+    "otpLabel": "Verification code",
+    "verify": "Verify",
+    "verifying": "Verifying…",
+    "otpError": "Incorrect or expired code",
+    "successTitle": "Order confirmed!",
+    "successBody": "We have received your order and will send you a confirmation by email.",
+    "newOrder": "New order",
+    "otpNote": "A 6-digit code will be sent to verify your email.",
+    "resend": "Resend code"
+  }
+}

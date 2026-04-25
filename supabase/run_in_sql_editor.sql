@@ -248,3 +248,35 @@ INSERT INTO menu_items (num, section, display_order, name_fr, name_nl, name_en, 
 ('109', 'desserts', 10, 'Beignets de bananes',                      'Bananenbeignets',                        'Banana fritters',                       false, 5.00),
 ('110', 'desserts', 20, 'Beignets de bananes au miel et amandes',   'Bananenbeignets met honing en amandelen','Banana fritters with honey & almonds',  false, 6.00),
 ('112', 'desserts', 30, 'Lychées (fruits)',                          'Lychees (fruit)',                        'Lychees (fruit)',                       false, 5.50);
+
+-- ============================================================
+-- 5. TAKEAWAY ORDERS & OTP VERIFICATION
+-- ============================================================
+CREATE TABLE IF NOT EXISTS orders (
+  id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  customer_name   TEXT NOT NULL,
+  customer_email  TEXT NOT NULL,
+  customer_phone  TEXT,
+  items           JSONB NOT NULL,
+  total           NUMERIC(8,2) NOT NULL,
+  locale          TEXT DEFAULT 'fr',
+  status          TEXT DEFAULT 'pending',
+  created_at      TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS otps (
+  id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email       TEXT NOT NULL,
+  code        TEXT NOT NULL,
+  expires_at  TIMESTAMPTZ NOT NULL,
+  used        BOOLEAN DEFAULT false,
+  created_at  TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+ALTER TABLE otps   ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public insert orders" ON orders FOR INSERT WITH CHECK (true);
+CREATE POLICY "Public insert otps"   ON otps   FOR INSERT WITH CHECK (true);
+CREATE POLICY "Public read otps"     ON otps   FOR SELECT USING (true);
+CREATE POLICY "Public update otps"   ON otps   FOR UPDATE USING (true);

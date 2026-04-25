@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Cinzel, Jost, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import { LanguageProvider } from '@/lib/i18n/LanguageContext';
+import { OrderProvider } from '@/components/OrderProvider';
 
 const cinzel = Cinzel({
   weight: ['400', '600', '700'],
@@ -30,7 +32,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${cinzel.variable} ${jost.variable} ${playfair.variable}`}>
       <body className="font-body bg-bg text-text">
-        {children}
+        <LanguageProvider>
+          <OrderProvider>
+            {children}
+          </OrderProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

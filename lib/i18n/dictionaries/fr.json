@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "hours": "Horaires",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Cuisine Chinoise Authentique · Bruxelles",
+    "subtitle": "Des saveurs authentiques de la cuisine chinoise traditionnelle, à déguster sur place ou à emporter à De Wand.",
+    "cta_menu": "Voir le Menu",
+    "cta_find": "Nous Trouver",
+    "scroll": "Découvrir"
+  },
+  "about": {
+    "label": "Notre Restaurant",
+    "title": "Cuisine Chinoise Authentique",
+    "body": "Au cœur du quartier De Wand à Laeken, Orient Express vous propose une cuisine chinoise authentique à déguster sur place ou à emporter. Soupes, entrées, viandes, fruits de mer, fondue chinoise — notre carte généreuse satisfera tous les appétits.",
+    "stat_rating": "Note Google",
+    "stat_dishes": "Plats au menu",
+    "stat_delivery": "Livraison dès 20€",
+    "stat_fondue": "Fondue sur résa"
+  },
+  "menu": {
+    "label": "Notre Carte",
+    "title": "Menu",
+    "rice_note": "Tous les plats sont accompagnés de riz blanc.",
+    "loading": "Chargement…",
+    "empty": "Aucun plat trouvé.",
+    "col_num": "N°",
+    "col_dish": "Plat",
+    "col_price": "Prix",
+    "min_people": "Min.",
+    "person": "personne",
+    "persons": "personnes",
+    "max": "max",
+    "add": "Ajouter"
+  },
+  "findus": {
+    "label": "Informations",
+    "title": "Nous Trouver",
+    "address_label": "Adresse",
+    "phone_label": "Téléphone",
+    "delivery_label": "Livraison à domicile",
+    "delivery_from": "À partir de",
+    "delivery_radius": "· Dans un rayon de 3 km",
+    "delivery_hours": "Disponible",
+    "hours_label": "Horaires",
+    "closed": "Fermé",
+    "closed_note": "Fermé les lundis non fériés.",
+    "rice_note": "Tous nos plats sont accompagnés de",
+    "white_rice": "riz blanc",
+    "upgrade_note": "Remplacement par riz sauté ou nouilles sautées :",
+    "upgrade_price": "+3,00€ par plat"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "order": {
+    "title": "Votre Commande",
+    "close": "Fermer",
+    "total": "Total",
+    "emailOrder": "Commander",
+    "empty": "Votre panier est vide",
+    "customerName": "Votre nom",
+    "customerEmail": "Email",
+    "customerPhone": "Téléphone (optionnel)",
+    "sendOtp": "Confirmer ma commande",
+    "sending": "Envoi…",
+    "otpSentTo": "Code envoyé à",
+    "otpLabel": "Code de vérification",
+    "verify": "Valider",
+    "verifying": "Vérification…",
+    "otpError": "Code incorrect ou expiré",
+    "successTitle": "Commande confirmée !",
+    "successBody": "Nous avons reçu votre commande et vous enverrons une confirmation par email.",
+    "newOrder": "Nouvelle commande",
+    "otpNote": "Un code à 6 chiffres vous sera envoyé pour confirmer votre email.",
+    "resend": "Renvoyer le code"
+  }
+}

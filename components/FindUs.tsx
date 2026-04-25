@@ -1,34 +1,39 @@
+'use client';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+
 const HOURS = [
-  { day: 'Lundi',    nl: 'Maandag',   en: 'Monday',    time: 'Fermé' },
-  { day: 'Mardi',    nl: 'Dinsdag',   en: 'Tuesday',   time: '11h00–14h00 · 17h00–22h00' },
-  { day: 'Mercredi', nl: 'Woensdag',  en: 'Wednesday', time: '11h00–14h00 · 17h00–22h00' },
-  { day: 'Jeudi',    nl: 'Donderdag', en: 'Thursday',  time: '11h00–14h00 · 17h00–22h00' },
-  { day: 'Vendredi', nl: 'Vrijdag',   en: 'Friday',    time: '11h00–14h00 · 17h00–22h00' },
-  { day: 'Samedi',   nl: 'Zaterdag',  en: 'Saturday',  time: '11h00–14h00 · 17h00–22h00' },
-  { day: 'Dimanche', nl: 'Zondag',    en: 'Sunday',    time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Lundi',    nl: 'Maandag',   en: 'Monday',    time: null },
+  { fr: 'Mardi',    nl: 'Dinsdag',   en: 'Tuesday',   time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Mercredi', nl: 'Woensdag',  en: 'Wednesday', time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Jeudi',    nl: 'Donderdag', en: 'Thursday',  time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Vendredi', nl: 'Vrijdag',   en: 'Friday',    time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Samedi',   nl: 'Zaterdag',  en: 'Saturday',  time: '11h00–14h00 · 17h00–22h00' },
+  { fr: 'Dimanche', nl: 'Zondag',    en: 'Sunday',    time: '11h00–14h00 · 17h00–22h00' },
 ];
 
 export default function FindUs() {
+  const { locale, dict } = useLanguage();
+  const t = dict.findus;
+
   return (
     <section id="informations" className="py-24 px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-4 block">Informations</span>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold">Nous Trouver</h2>
+          <span className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-4 block">{t.label}</span>
+          <h2 className="font-display text-3xl md:text-4xl font-semibold">{t.title}</h2>
           <div className="w-12 h-px bg-gold mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Info */}
           <div>
             <div className="mb-8">
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">Adresse</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.address_label}</h3>
               <p className="text-text-muted">Rue de Wand 16 (Wandstraat 16)</p>
               <p className="text-text-muted">1020 Laeken, Bruxelles</p>
             </div>
 
             <div className="mb-8">
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">Téléphone</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.phone_label}</h3>
               <a href="tel:+3222620879" className="block text-text hover:text-accent transition-colors font-medium">
                 02/262 08 79
               </a>
@@ -38,33 +43,36 @@ export default function FindUs() {
             </div>
 
             <div className="mb-8">
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">Livraison à domicile</h3>
-              <p className="text-text-muted text-sm">À partir de <span className="text-gold font-semibold">20,00€</span> · Dans un rayon de 3 km</p>
-              <p className="text-text-muted text-sm mt-1">Disponible <span className="text-text">18h30–21h30</span></p>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.delivery_label}</h3>
+              <p className="text-text-muted text-sm">
+                {t.delivery_from} <span className="text-gold font-semibold">20,00€</span> {t.delivery_radius}
+              </p>
+              <p className="text-text-muted text-sm mt-1">{t.delivery_hours} <span className="text-text">18h30–21h30</span></p>
             </div>
 
             <div>
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">Horaires</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.hours_label}</h3>
               <table className="w-full text-sm">
                 <tbody>
-                  {HOURS.map(({ day, time }) => {
-                    const isClosed = time === 'Fermé';
+                  {HOURS.map((row) => {
+                    const dayName = row[locale as 'fr' | 'nl' | 'en'];
+                    const isClosed = row.time === null;
                     return (
-                      <tr key={day} className="border-b border-border">
-                        <td className="py-2.5 pr-4 text-text">{day}</td>
+                      <tr key={row.fr} className="border-b border-border">
+                        <td className="py-2.5 pr-4 text-text">{dayName}</td>
                         <td className={`py-2.5 ${isClosed ? 'text-text-muted italic' : 'text-gold font-medium'}`}>
-                          {time}
+                          {isClosed ? t.closed : row.time}
                         </td>
                       </tr>
                     );
                   })}
                 </tbody>
               </table>
-              <p className="text-xs text-text-muted mt-3 italic">Fermé les lundis non fériés.</p>
+              <p className="text-xs text-text-muted mt-3 italic">{t.closed_note}</p>
             </div>
           </div>
 
-          {/* Right: Map */}
+          {/* Map */}
           <div className="rounded-lg overflow-hidden min-h-[450px] border border-border">
             <iframe
               title="Orient Express — Rue de Wand 16, 1020 Bruxelles"
@@ -79,12 +87,11 @@ export default function FindUs() {
           </div>
         </div>
 
-        {/* Note */}
         <div className="mt-12 p-6 border border-border text-center">
           <p className="text-text-muted text-sm">
-            Tous nos plats sont accompagnés de <span className="text-text">riz blanc</span>.
-            Remplacement par riz sauté ou nouilles sautées :
-            <span className="text-gold font-semibold"> +3,00€ par plat</span>
+            {t.rice_note} <span className="text-text">{t.white_rice}</span>.{' '}
+            {t.upgrade_note}{' '}
+            <span className="text-gold font-semibold">{t.upgrade_price}</span>
           </p>
         </div>
       </div>
