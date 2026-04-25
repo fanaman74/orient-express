@@ -24,15 +24,15 @@ export default function FindUs() {
           <div className="w-12 h-px bg-gold mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <div className="mb-8">
+        <div className="flex flex-col gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
               <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.address_label}</h3>
               <p className="text-text-muted">Rue de Wand 16 (Wandstraat 16)</p>
               <p className="text-text-muted">1020 Laeken, Bruxelles</p>
             </div>
 
-            <div className="mb-8">
+            <div>
               <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.phone_label}</h3>
               <a href="tel:+3222620879" className="block text-text hover:text-accent transition-colors font-medium">
                 02/262 08 79
@@ -42,7 +42,7 @@ export default function FindUs() {
               </a>
             </div>
 
-            <div className="mb-8">
+            <div>
               <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.delivery_label}</h3>
               <p className="text-text-muted text-sm">
                 {t.delivery_from} <span className="text-gold font-semibold">20,00€</span> {t.delivery_radius}
