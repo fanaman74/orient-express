@@ -27,12 +27,10 @@ export async function POST(req: NextRequest) {
 
     await supabase.from('otps').update({ used: true }).eq('id', otp.id);
 
-    // Save order
-    const { data: order, error: orderError } = await supabase
+    // Save order (no .select() — avoids needing SELECT policy with anon key)
+    const { error: orderError } = await supabase
       .from('orders')
-      .insert({ customer_name: customerName, customer_email: email, customer_phone: customerPhone || null, items, total, locale: locale || 'fr' })
-      .select('id')
-      .single();
+      .insert({ customer_name: customerName, customer_email: email, customer_phone: customerPhone || null, items, total, locale: locale || 'fr' });
 
     if (orderError) return NextResponse.json({ error: 'Database error' }, { status: 500 });
 
@@ -110,7 +108,7 @@ export async function POST(req: NextRequest) {
       ]).catch(err => console.error('Email error:', err));
     }
 
-    return NextResponse.json({ success: true, orderId: order.id });
+    return NextResponse.json({ success: true });
   } catch (e: any) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }
