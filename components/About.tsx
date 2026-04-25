@@ -13,18 +13,14 @@ export default function About() {
         <div className="w-12 h-px bg-gold mx-auto mb-8" />
         <p className="text-text/80 leading-relaxed text-lg">{t.body}</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-3 gap-6 mt-16">
           {[
-            { value: '4.6★', label: t.stat_rating,   emoji: false },
-            { value: '130+', label: t.stat_dishes,    emoji: false },
-            { value: '3KM',  label: t.stat_delivery,  emoji: false },
-            { value: '🥟',   label: t.stat_fondue,    emoji: true  },
-          ].map(({ value, label, emoji }) => (
+            { value: '4.6★', label: t.stat_rating },
+            { value: '130+', label: t.stat_dishes },
+            { value: '3KM',  label: t.stat_delivery },
+          ].map(({ value, label }) => (
             <div key={label} className="flex flex-col items-center gap-3 p-4 border border-border">
-              {emoji
-                ? <span className="text-5xl leading-none">{value}</span>
-                : <span className="font-stat text-3xl text-accent leading-none">{value}</span>
-              }
+              <span className="font-stat text-3xl text-accent leading-none">{value}</span>
               <span className="text-xs uppercase tracking-widest text-text-muted text-center leading-relaxed w-full block">{label}</span>
             </div>
           ))}
