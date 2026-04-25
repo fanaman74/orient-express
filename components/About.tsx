@@ -15,14 +15,17 @@ export default function About() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
-            { value: '4.6★', label: t.stat_rating },
-            { value: '130+', label: t.stat_dishes },
-            { value: '3KM',  label: t.stat_delivery },
-            { value: '🥟',   label: t.stat_fondue },
-          ].map(({ value, label }) => (
+            { value: '4.6★', label: t.stat_rating,   emoji: false },
+            { value: '130+', label: t.stat_dishes,    emoji: false },
+            { value: '3KM',  label: t.stat_delivery,  emoji: false },
+            { value: '🥟',   label: t.stat_fondue,    emoji: true  },
+          ].map(({ value, label, emoji }) => (
             <div key={label} className="flex flex-col items-center gap-3 p-4 border border-border">
-              <span className="font-stat text-3xl text-accent leading-none">{value}</span>
-              <span className="text-xs uppercase tracking-widest text-text-muted text-center leading-relaxed">{label}</span>
+              {emoji
+                ? <span className="text-5xl leading-none">{value}</span>
+                : <span className="font-stat text-3xl text-accent leading-none">{value}</span>
+              }
+              <span className="text-xs uppercase tracking-widest text-text-muted text-center leading-relaxed w-full block">{label}</span>
             </div>
           ))}
         </div>
