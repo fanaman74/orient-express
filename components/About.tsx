@@ -17,12 +17,12 @@ export default function About() {
           {[
             { value: '4.6★', label: t.stat_rating },
             { value: '130+', label: t.stat_dishes },
-            { value: '3km',  label: t.stat_delivery },
+            { value: '3KM',  label: t.stat_delivery },
             { value: '🥟',   label: t.stat_fondue },
           ].map(({ value, label }) => (
-            <div key={label} className="flex flex-col items-center gap-2 p-4 border border-border">
-              <span className="font-display text-xl text-accent">{value}</span>
-              <span className="text-xs uppercase tracking-widest text-text-muted text-center">{label}</span>
+            <div key={label} className="flex flex-col items-center gap-3 p-4 border border-border">
+              <span className="font-stat text-3xl text-accent leading-none">{value}</span>
+              <span className="text-xs uppercase tracking-widest text-text-muted text-center leading-relaxed">{label}</span>
             </div>
           ))}
         </div>

@@ -11,6 +11,7 @@
   --color-gold: #d4a017;
   --color-border: rgba(255, 255, 255, 0.08);
 
+  --font-stat: var(--font-chango, 'Chango'), Georgia, serif;
   --font-brand: var(--font-carter, 'Carter One'), Georgia, serif;
   --font-display: var(--font-cinzel, 'Cinzel'), Georgia, serif;
   --font-hero: var(--font-playfair, 'Playfair Display'), Georgia, serif;

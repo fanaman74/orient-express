@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
-import { Carter_One, Cinzel, Jost, Playfair_Display } from 'next/font/google';
+import { Carter_One, Chango, Cinzel, Jost, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { OrderProvider } from '@/components/OrderProvider';
+
+const chango = Chango({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-chango',
+  display: 'swap',
+});
 
 const carterOne = Carter_One({
   weight: ['400'],
@@ -37,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${carterOne.variable} ${cinzel.variable} ${jost.variable} ${playfair.variable}`}>
+    <html lang="fr" className={`${chango.variable} ${carterOne.variable} ${cinzel.variable} ${jost.variable} ${playfair.variable}`}>
       <body className="font-body bg-bg text-text">
         <LanguageProvider>
           <OrderProvider>
