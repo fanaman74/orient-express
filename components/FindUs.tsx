@@ -25,7 +25,8 @@ export default function FindUs() {
         </div>
 
         <div className="flex flex-col gap-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Row 1: Address · Phone · Delivery — 3 cols centered */}
+          <div className="flex flex-col sm:flex-row justify-center gap-12 sm:gap-16 lg:gap-24">
             <div>
               <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.address_label}</h3>
               <p className="text-text-muted">Rue de Wand 16 (Wandstraat 16)</p>
@@ -49,9 +50,12 @@ export default function FindUs() {
               </p>
               <p className="text-text-muted text-sm mt-1">{t.delivery_hours} <span className="text-text">18h30–21h30</span></p>
             </div>
+          </div>
 
-            <div>
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.hours_label}</h3>
+          {/* Row 2: Hours — centered, max width so table doesn't stretch too wide */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3 text-center">{t.hours_label}</h3>
               <table className="w-full text-sm">
                 <tbody>
                   {HOURS.map((row) => {
@@ -60,7 +64,7 @@ export default function FindUs() {
                     return (
                       <tr key={row.fr} className="border-b border-border">
                         <td className="py-2.5 pr-4 text-text">{dayName}</td>
-                        <td className={`py-2.5 ${isClosed ? 'text-text-muted italic' : 'text-gold font-medium'}`}>
+                        <td className={`py-2.5 text-right ${isClosed ? 'text-text-muted italic' : 'text-gold font-medium'}`}>
                           {isClosed ? t.closed : row.time}
                         </td>
                       </tr>
@@ -68,7 +72,7 @@ export default function FindUs() {
                   })}
                 </tbody>
               </table>
-              <p className="text-xs text-text-muted mt-3 italic">{t.closed_note}</p>
+              <p className="text-xs text-text-muted mt-3 italic text-center">{t.closed_note}</p>
             </div>
           </div>
 
