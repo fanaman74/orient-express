@@ -29,8 +29,8 @@ export default function Hero() {
           {t.tagline}
         </span>
 
-        <h1 className="font-hero text-5xl md:text-6xl lg:text-7xl max-w-[700px] hero-animate hero-animate-delay-2 font-bold leading-tight">
-          Orient Express
+        <h1 className="font-brand text-5xl md:text-6xl lg:text-8xl max-w-[700px] hero-animate hero-animate-delay-2 text-accent leading-tight">
+          ORIENT EXPRESS
         </h1>
 
         <div className="w-16 h-px bg-accent hero-animate hero-animate-delay-3" />
