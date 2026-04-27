@@ -29,13 +29,13 @@ export default function Hero() {
           {t.tagline}
         </span>
 
-        <h1 className="font-brand text-5xl md:text-6xl lg:text-8xl max-w-[700px] hero-animate hero-animate-delay-2 text-accent leading-tight">
+        <h1 className="font-brand text-5xl md:text-6xl lg:text-8xl max-w-[700px] hero-animate hero-animate-delay-2 text-white leading-tight">
           ORIENT EXPRESS
         </h1>
 
         <div className="w-16 h-px bg-accent hero-animate hero-animate-delay-3" />
 
-        <p className="text-text-muted font-medium max-w-[480px] hero-animate hero-animate-delay-3 leading-relaxed">
+        <p className="text-white/90 font-medium max-w-[480px] hero-animate hero-animate-delay-3 leading-relaxed">
           {t.subtitle}
         </p>
 
