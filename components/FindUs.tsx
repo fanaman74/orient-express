@@ -28,13 +28,13 @@ export default function FindUs() {
           {/* Row 1: Address · Phone · Delivery — 3 cols centered */}
           <div className="flex flex-col sm:flex-row justify-center gap-12 sm:gap-16 lg:gap-24">
             <div>
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.address_label}</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent-alt mb-3">{t.address_label}</h3>
               <p className="text-text-muted">Rue de Wand 16 (Wandstraat 16)</p>
               <p className="text-text-muted">1020 Laeken, Bruxelles</p>
             </div>
 
             <div>
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.phone_label}</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent-alt mb-3">{t.phone_label}</h3>
               <a href="tel:+3222620879" className="block text-text hover:text-accent transition-colors font-medium">
                 02/262 08 79
               </a>
@@ -44,7 +44,7 @@ export default function FindUs() {
             </div>
 
             <div>
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3">{t.delivery_label}</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent-alt mb-3">{t.delivery_label}</h3>
               <p className="text-text-muted text-sm">
                 {t.delivery_from} <span className="text-gold font-semibold">20,00€</span> {t.delivery_radius}
               </p>
@@ -55,7 +55,7 @@ export default function FindUs() {
           {/* Row 2: Hours — centered, max width so table doesn't stretch too wide */}
           <div className="flex justify-center">
             <div className="w-full max-w-md">
-              <h3 className="font-display text-xs uppercase tracking-widest text-accent mb-3 text-center">{t.hours_label}</h3>
+              <h3 className="font-display text-xs uppercase tracking-widest text-accent-alt mb-3 text-center">{t.hours_label}</h3>
               <table className="w-full text-sm">
                 <tbody>
                   {HOURS.map((row) => {
